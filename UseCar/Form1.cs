@@ -13,7 +13,15 @@ namespace UseCar
     public partial class Form1 : Form
     {
 
-       public static CarList carList = new CarList();
+        public static CarList carList = new CarList();
+
+        string make = "", model = "", color = "", cylinder = "", doors = "", price = "";
+
+        Boolean truck = false, suv = false, sedan = false;
+
+        int cy = 0, d = 0;
+
+        double p = 0.0;
 
         public Form1()
         {
@@ -73,74 +81,99 @@ namespace UseCar
         {
             MyCar car = null;
 
-            if (rbtnTruck.Checked)
+            make = txtMake.Text.ToString();
+            model = txtModel.Text.ToString();
+            color = txtColor.Text.ToString();
+            cylinder = txtCylinders.Text.ToString();
+            doors = txtDoors.Text.ToString();
+            price = txtPrice.Text.ToString();
+
+            truck = rbtnTruck.Checked;
+            suv = rbtnSuv.Checked;
+            sedan = rbtnSedan.Checked;
+
+
+            if (make.Equals("") || model.Equals("") || color.Equals("") || cylinder.Equals("") || doors.Equals("") || price.Equals("")
+               /* || groupBox1.Controls.OfType<RadioButton>().Any(x => x.Checked) */)
             {
-                car = new Truck(txtOption.Text.ToString());
-                
-              
-            }
-            else if (rbtnSedan.Checked)
-            {
-                car = new Sedan(txtOption.Text.ToString());
-                
-            }
-            else if (rbtnSuv.Checked)
-            {
-                car = new Suv(txtOption.Text.ToString());
+                MessageBox.Show("There is an empty field.");
             }
             else
             {
 
+                if (rbtnTruck.Checked)
+                {
+                    car = new Truck(txtOption.Text.ToString());
+
+                }
+                else if (rbtnSedan.Checked)
+                {
+                    car = new Sedan(txtOption.Text.ToString());
+
+                }
+                else if (rbtnSuv.Checked)
+                {
+                    car = new Suv(txtOption.Text.ToString());
+                }
+                else
+                {
+
+                }
+
+
+                
+                car.make = make;
+                car.model = model;
+                car.color = color;
+
+                if (int.TryParse(cylinder, out cy))
+                {
+                    car.cylinders = cy;
+                }
+                else
+                {
+                    MessageBox.Show("Cylinders must be a number");
+                }
+
+                if (int.TryParse(doors, out d))
+                {
+                    car.doors = d;
+                }
+
+
+                if (double.TryParse(price, out p))
+                {
+                    car.price = p;
+                }
+
+
+                carList.add(car);
+
+                var alert = MessageBox.Show("CAR CREATED\n\n" + car.make + "\n" +
+                                            car.model + "\n" +
+                                            car.color + "\n" +
+                                            car.cylinders.ToString() + "\n" +
+                                            car.doors.ToString() + "\n" +
+                                            car.price.ToString() + "\n"
+                                          );
+
+                txtMake.Text = "";
+                txtModel.Text = "";
+                txtColor.Text = "";
+                txtCylinders.Text = "";
+                txtDoors.Text = "";
+                txtPrice.Text = "";
+                txtOption.Text = "";
+
+                rbtnSedan.Checked = false;
+                rbtnSuv.Checked = false;
+                rbtnTruck.Checked = false;
+
+                lblOption.Text = "";
+
             }
-            
 
 
-
-            car.make = txtMake.Text.ToString();
-            car.model = txtModel.Text.ToString();
-            car.color = txtColor.Text.ToString();
-
-            int cy = 0, d = 0;
-            if(int.TryParse(txtCylinders.Text.ToString(), out cy)){
-                car.cylinders = cy;
-            }
-
-            if(int.TryParse(txtDoors.Text.ToString(), out d)){
-                car.doors = d;
-            }
-
-            double p = 0.0;
-            if(double.TryParse(txtPrice.Text.ToString(), out p)){
-                car.price = p;
-            }
-
-           
-
-            carList.add(car);
-
-            var alert = MessageBox.Show("CAR CREATED\n\n" + car.make + "\n" +
-                                        car.model + "\n" +
-                                        car.color + "\n" +
-                                        car.cylinders.ToString() + "\n" +
-                                        car.doors.ToString() + "\n" +
-                                        car.price.ToString());
-
-          
-
-            txtMake.Text = "";
-            txtModel.Text = "";
-            txtColor.Text = "";
-            txtCylinders.Text = "";
-            txtDoors.Text = "";
-            txtPrice.Text = "";
-            txtOption.Text = "";
-
-            rbtnSedan.Checked = false;
-            rbtnSuv.Checked = false;
-            rbtnTruck.Checked = false;
-
-            lblOption.Text = "";
- 
         }
 
         private void btnViewCars_Click(object sender, EventArgs e)

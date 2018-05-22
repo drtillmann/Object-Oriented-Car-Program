@@ -11,7 +11,7 @@ namespace UseCar
 
         public Truck( String bed = "")
         {
-            bedSize = bed;
+            this.bedSize = bed;
 
         }
 
@@ -31,7 +31,7 @@ namespace UseCar
             info[3] = cylinders.ToString();
             info[4] = doors.ToString();
             info[5] = price.ToString();
-            info[6] = bedSize;
+            info[6] = this.bedSize;
 
             return info;
 

@@ -175,7 +175,7 @@
             this.rbtnSedan.Location = new System.Drawing.Point(6, 19);
             this.rbtnSedan.Name = "rbtnSedan";
             this.rbtnSedan.Size = new System.Drawing.Size(56, 17);
-            this.rbtnSedan.TabIndex = 9;
+            this.rbtnSedan.TabIndex = 7;
             this.rbtnSedan.TabStop = true;
             this.rbtnSedan.Text = "Sedan";
             this.rbtnSedan.UseVisualStyleBackColor = true;
@@ -199,7 +199,7 @@
             this.rbtnSuv.Location = new System.Drawing.Point(6, 65);
             this.rbtnSuv.Name = "rbtnSuv";
             this.rbtnSuv.Size = new System.Drawing.Size(47, 17);
-            this.rbtnSuv.TabIndex = 11;
+            this.rbtnSuv.TabIndex = 9;
             this.rbtnSuv.TabStop = true;
             this.rbtnSuv.Text = "SUV";
             this.rbtnSuv.UseVisualStyleBackColor = true;
@@ -210,7 +210,7 @@
             this.rbtnTruck.Location = new System.Drawing.Point(6, 42);
             this.rbtnTruck.Name = "rbtnTruck";
             this.rbtnTruck.Size = new System.Drawing.Size(53, 17);
-            this.rbtnTruck.TabIndex = 10;
+            this.rbtnTruck.TabIndex = 8;
             this.rbtnTruck.TabStop = true;
             this.rbtnTruck.Text = "Truck";
             this.rbtnTruck.UseVisualStyleBackColor = true;
@@ -228,7 +228,7 @@
             this.txtOption.Location = new System.Drawing.Point(107, 412);
             this.txtOption.Name = "txtOption";
             this.txtOption.Size = new System.Drawing.Size(172, 20);
-            this.txtOption.TabIndex = 12;
+            this.txtOption.TabIndex = 10;
             // 
             // Form1
             // 
