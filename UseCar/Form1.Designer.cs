@@ -42,6 +42,13 @@
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnViewCars = new System.Windows.Forms.Button();
+            this.rbtnSedan = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbtnSuv = new System.Windows.Forms.RadioButton();
+            this.rbtnTruck = new System.Windows.Forms.RadioButton();
+            this.lbl = new System.Windows.Forms.Label();
+            this.txt = new System.Windows.Forms.TextBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMake
@@ -60,6 +67,7 @@
             this.txtMake.Name = "txtMake";
             this.txtMake.Size = new System.Drawing.Size(172, 20);
             this.txtMake.TabIndex = 1;
+            this.txtMake.TextChanged += new System.EventHandler(this.txtMake_TextChanged);
             // 
             // lblModel
             // 
@@ -143,7 +151,7 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(107, 382);
+            this.btnCreate.Location = new System.Drawing.Point(107, 486);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(159, 64);
             this.btnCreate.TabIndex = 7;
@@ -153,7 +161,7 @@
             // 
             // btnViewCars
             // 
-            this.btnViewCars.Location = new System.Drawing.Point(143, 474);
+            this.btnViewCars.Location = new System.Drawing.Point(147, 556);
             this.btnViewCars.Name = "btnViewCars";
             this.btnViewCars.Size = new System.Drawing.Size(75, 40);
             this.btnViewCars.TabIndex = 8;
@@ -161,11 +169,75 @@
             this.btnViewCars.UseVisualStyleBackColor = true;
             this.btnViewCars.Click += new System.EventHandler(this.btnViewCars_Click);
             // 
+            // rbtnSedan
+            // 
+            this.rbtnSedan.AutoSize = true;
+            this.rbtnSedan.Location = new System.Drawing.Point(6, 19);
+            this.rbtnSedan.Name = "rbtnSedan";
+            this.rbtnSedan.Size = new System.Drawing.Size(56, 17);
+            this.rbtnSedan.TabIndex = 9;
+            this.rbtnSedan.TabStop = true;
+            this.rbtnSedan.Text = "Sedan";
+            this.rbtnSedan.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbtnSuv);
+            this.groupBox1.Controls.Add(this.rbtnTruck);
+            this.groupBox1.Controls.Add(this.rbtnSedan);
+            this.groupBox1.Location = new System.Drawing.Point(79, 287);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Vehicle Type";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // rbtnSuv
+            // 
+            this.rbtnSuv.AutoSize = true;
+            this.rbtnSuv.Location = new System.Drawing.Point(6, 65);
+            this.rbtnSuv.Name = "rbtnSuv";
+            this.rbtnSuv.Size = new System.Drawing.Size(47, 17);
+            this.rbtnSuv.TabIndex = 11;
+            this.rbtnSuv.TabStop = true;
+            this.rbtnSuv.Text = "SUV";
+            this.rbtnSuv.UseVisualStyleBackColor = true;
+            // 
+            // rbtnTruck
+            // 
+            this.rbtnTruck.AutoSize = true;
+            this.rbtnTruck.Location = new System.Drawing.Point(6, 42);
+            this.rbtnTruck.Name = "rbtnTruck";
+            this.rbtnTruck.Size = new System.Drawing.Size(53, 17);
+            this.rbtnTruck.TabIndex = 10;
+            this.rbtnTruck.TabStop = true;
+            this.rbtnTruck.Text = "Truck";
+            this.rbtnTruck.UseVisualStyleBackColor = true;
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Location = new System.Drawing.Point(12, 419);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(0, 13);
+            this.lbl.TabIndex = 11;
+            // 
+            // txt
+            // 
+            this.txt.Location = new System.Drawing.Point(107, 412);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(172, 20);
+            this.txt.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 548);
+            this.ClientSize = new System.Drawing.Size(369, 622);
+            this.Controls.Add(this.txt);
+            this.Controls.Add(this.lbl);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnViewCars);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.txtPrice);
@@ -183,6 +255,8 @@
             this.Name = "Form1";
             this.Text = "Create A Car";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,6 +278,12 @@
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnViewCars;
+        private System.Windows.Forms.RadioButton rbtnSedan;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbtnSuv;
+        private System.Windows.Forms.RadioButton rbtnTruck;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.TextBox txt;
     }
 }
 

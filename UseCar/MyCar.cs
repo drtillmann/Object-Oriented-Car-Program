@@ -23,7 +23,7 @@ namespace UseCar
 
         public String make
         {
-            get; 
+            get;
             set;
         }
 
@@ -56,6 +56,7 @@ namespace UseCar
             get;
             set;
         }
-        
+
+        public virtual String[] print() { return new String[7]; }
     }
 }

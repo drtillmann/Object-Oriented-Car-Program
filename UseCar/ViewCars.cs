@@ -35,16 +35,38 @@ namespace UseCar
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            MyCar vehicle = null;
+            String[] info = null;
 
-            MyCar car = (MyCar)this.cmbBoxCars.SelectedItem;
+            if (this.cmbBoxCars.SelectedItem is Truck)
+            {
+                MessageBox.Show("Truck object");
+                vehicle = (Truck)this.cmbBoxCars.SelectedItem;
+            }else if (this.cmbBoxCars.SelectedItem is Suv)
+            {
+                MessageBox.Show("SUV object");
+                vehicle = (Suv)this.cmbBoxCars.SelectedItem;
+            }else if (this.cmbBoxCars.SelectedItem is Sedan)
+            {
+                MessageBox.Show("Sedan object");
+                vehicle = (Sedan)this.cmbBoxCars.SelectedItem;
+            }
+            else
+            {
+                MessageBox.Show("No object that i can use.");
+            }
 
-            viewMake.Text = car.make;
-            viewModel.Text = car.model;
-            viewColor.Text = car.color;
-            viewCylinders.Text = car.cylinders.ToString();
-            viewDoors.Text = car.doors.ToString();
-            viewPrice.Text = car.price.ToString();
+            // MyCar car = (MyCar)this.cmbBoxCars.SelectedItem;
 
+            info = vehicle.print();
+
+            viewMake.Text = vehicle.print()[0];
+            viewModel.Text = info[1];
+            viewColor.Text = info[2];
+            viewCylinders.Text = info[3];
+            viewDoors.Text = info[4];
+            viewPrice.Text = info[5];
+            txtOption.Text = info[6];
             
         }
 
@@ -72,7 +94,10 @@ namespace UseCar
 
 
         }
-        
 
+        private void ViewCars_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
