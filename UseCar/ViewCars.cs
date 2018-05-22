@@ -45,14 +45,17 @@ namespace UseCar
             {
                 MessageBox.Show(truck);
                 vehicle = (Truck)this.cmbBoxCars.SelectedItem;
+                lblOption.Text = "Bed Size";
             }else if (this.cmbBoxCars.SelectedItem is Suv)
             {
                 MessageBox.Show(suv);
                 vehicle = (Suv)this.cmbBoxCars.SelectedItem;
+                lblOption.Text = "Drivetrain";
             }else if (this.cmbBoxCars.SelectedItem is Sedan)
             {
                 MessageBox.Show(sedan);
                 vehicle = (Sedan)this.cmbBoxCars.SelectedItem;
+                lblOption.Text = "Transmission";
             }
             else
             {

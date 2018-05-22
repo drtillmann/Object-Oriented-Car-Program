@@ -45,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.viewOption = new System.Windows.Forms.TextBox();
+            this.lblOption = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,11 +183,20 @@
             this.viewOption.TabIndex = 14;
             this.viewOption.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // lblOption
+            // 
+            this.lblOption.AutoSize = true;
+            this.lblOption.Location = new System.Drawing.Point(15, 304);
+            this.lblOption.Name = "lblOption";
+            this.lblOption.Size = new System.Drawing.Size(0, 13);
+            this.lblOption.TabIndex = 15;
+            // 
             // ViewCars
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 394);
+            this.Controls.Add(this.lblOption);
             this.Controls.Add(this.viewOption);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -229,5 +239,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox viewOption;
+        private System.Windows.Forms.Label lblOption;
     }
 }
