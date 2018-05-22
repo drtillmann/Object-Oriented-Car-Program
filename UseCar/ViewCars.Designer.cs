@@ -44,7 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtOption = new System.Windows.Forms.TextBox();
+            this.viewOption = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,20 +174,20 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Price";
             // 
-            // txtOption
+            // viewOption
             // 
-            this.txtOption.Location = new System.Drawing.Point(97, 298);
-            this.txtOption.Name = "txtOption";
-            this.txtOption.Size = new System.Drawing.Size(175, 20);
-            this.txtOption.TabIndex = 14;
-            this.txtOption.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.viewOption.Location = new System.Drawing.Point(97, 298);
+            this.viewOption.Name = "viewOption";
+            this.viewOption.Size = new System.Drawing.Size(175, 20);
+            this.viewOption.TabIndex = 14;
+            this.viewOption.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ViewCars
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 394);
-            this.Controls.Add(this.txtOption);
+            this.Controls.Add(this.viewOption);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -228,6 +228,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtOption;
+        private System.Windows.Forms.TextBox viewOption;
     }
 }

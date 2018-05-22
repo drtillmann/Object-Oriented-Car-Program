@@ -39,7 +39,7 @@ namespace UseCar
                 RadioButton rb = (RadioButton)sender;
                 if(rb.Checked)
                 {
-                    lbl.Text = "Bed Size";
+                    lblOption.Text = "Bed Size";
                 }
             }
 
@@ -52,7 +52,7 @@ namespace UseCar
                 RadioButton rb = (RadioButton)sender;
                 if (rb.Checked)
                 {
-                    lbl.Text = "Transmission";
+                    lblOption.Text = "Transmission";
                 }
             }
         }
@@ -64,7 +64,7 @@ namespace UseCar
                 RadioButton rb = (RadioButton)sender;
                 if (rb.Checked)
                 {
-                    lbl.Text = "Drivetrain";
+                    lblOption.Text = "Drivetrain";
                 }
             }
         }
@@ -75,18 +75,18 @@ namespace UseCar
 
             if (rbtnTruck.Checked)
             {
-                car = new Truck(txt.Text.ToString());
+                car = new Truck(txtOption.Text.ToString());
                 
               
             }
             else if (rbtnSedan.Checked)
             {
-                car = new Sedan(txt.Text.ToString());
+                car = new Sedan(txtOption.Text.ToString());
                 
             }
             else if (rbtnSuv.Checked)
             {
-                car = new Suv(txt.Text.ToString());
+                car = new Suv(txtOption.Text.ToString());
             }
             else
             {
@@ -125,9 +125,7 @@ namespace UseCar
                                         car.doors.ToString() + "\n" +
                                         car.price.ToString());
 
-            Console.WriteLine(car);
-
-            //Console.Beep();
+          
 
             txtMake.Text = "";
             txtModel.Text = "";
@@ -135,6 +133,13 @@ namespace UseCar
             txtCylinders.Text = "";
             txtDoors.Text = "";
             txtPrice.Text = "";
+            txtOption.Text = "";
+
+            rbtnSedan.Checked = false;
+            rbtnSuv.Checked = false;
+            rbtnTruck.Checked = false;
+
+            lblOption.Text = "";
  
         }
 

@@ -46,8 +46,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbtnSuv = new System.Windows.Forms.RadioButton();
             this.rbtnTruck = new System.Windows.Forms.RadioButton();
-            this.lbl = new System.Windows.Forms.Label();
-            this.txt = new System.Windows.Forms.TextBox();
+            this.lblOption = new System.Windows.Forms.Label();
+            this.txtOption = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -215,28 +215,28 @@
             this.rbtnTruck.Text = "Truck";
             this.rbtnTruck.UseVisualStyleBackColor = true;
             // 
-            // lbl
+            // lblOption
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(12, 419);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(0, 13);
-            this.lbl.TabIndex = 11;
+            this.lblOption.AutoSize = true;
+            this.lblOption.Location = new System.Drawing.Point(12, 419);
+            this.lblOption.Name = "lblOption";
+            this.lblOption.Size = new System.Drawing.Size(0, 13);
+            this.lblOption.TabIndex = 11;
             // 
-            // txt
+            // txtOption
             // 
-            this.txt.Location = new System.Drawing.Point(107, 412);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(172, 20);
-            this.txt.TabIndex = 12;
+            this.txtOption.Location = new System.Drawing.Point(107, 412);
+            this.txtOption.Name = "txtOption";
+            this.txtOption.Size = new System.Drawing.Size(172, 20);
+            this.txtOption.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 622);
-            this.Controls.Add(this.txt);
-            this.Controls.Add(this.lbl);
+            this.Controls.Add(this.txtOption);
+            this.Controls.Add(this.lblOption);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnViewCars);
             this.Controls.Add(this.btnCreate);
@@ -282,8 +282,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbtnSuv;
         private System.Windows.Forms.RadioButton rbtnTruck;
-        private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.TextBox txt;
+        private System.Windows.Forms.Label lblOption;
+        private System.Windows.Forms.TextBox txtOption;
     }
 }
 

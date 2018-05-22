@@ -66,7 +66,7 @@ namespace UseCar
             viewCylinders.Text = info[3];
             viewDoors.Text = info[4];
             viewPrice.Text = info[5];
-            txtOption.Text = info[6];
+            viewOption.Text = info[6];
             
         }
 
